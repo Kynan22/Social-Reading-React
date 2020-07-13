@@ -1,28 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
  
-import * as ROUTES from '../../constants/routes';
+import { withAuthorization } from '../Session';
  
-const Navigation = () => (
-    <div>
-        <ul>
-            <li>
-                <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-            </li>
-            <li>
-                <Link to={ROUTES.LANDING}>Landing</Link>
-            </li>
-            <li>
-                <Link to={ROUTES.HOME}>Home</Link>
-            </li>
-            <li>
-                <Link to={ROUTES.ACCOUNT}>Account</Link>
-            </li>
-            <li>
-                <Link to={ROUTES.ADMIN}>Admin</Link>
-            </li>
-        </ul>
-    </div>
+const HomePage = () => (
+  <div>
+    <h1>Home Page</h1>
+    <p>The Home Page is accessible by every signed in user.</p>
+  </div>
 );
  
-export default Navigation;
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(HomePage);
