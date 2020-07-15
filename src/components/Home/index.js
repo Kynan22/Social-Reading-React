@@ -3,10 +3,12 @@ import React from 'react';
 import { withAuthorization } from '../Session';
 
 import Reading from './reading';
+import FirestoreDocument from '../Firebase/document';
  
 const HomePage = () => (
   <div>
-    <Reading/>
+    
+    <FirestoreDocument/>
   </div>
 );
  
