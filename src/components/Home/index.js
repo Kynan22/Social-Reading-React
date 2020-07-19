@@ -7,7 +7,7 @@ import FirestoreDocument from '../Firebase/document';
  
 const HomePage = () => (
   <div>
-    
+    <Reading/>
     <FirestoreDocument/>
   </div>
 );
