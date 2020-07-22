@@ -28,7 +28,7 @@ class Documents extends React.Component {
     render(){
         return(
             <div>
-                <p>reading2</p>
+                <p>reading3</p>
                 <p>{this.FirestoreDocument}</p>
             </div>
         );
